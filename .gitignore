@@ -1,4 +1,7 @@
 .*
 !.gitignore
+!.classpath
+!.project
+!.settings
 bin/
 *.jar
