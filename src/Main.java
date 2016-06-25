@@ -26,14 +26,17 @@ public class Main {
 		EV3LargeRegulatedMotor[] syncList = new EV3LargeRegulatedMotor[1];
 		syncList[0] = roueDroite;
 		
-		c.Calage(roueDroite, roueGauche, color);
+		c.calage(roueDroite, roueGauche,moteurFrappe, color);
 		while(true){
-			l.SuivreLigne(roueDroite, roueGauche, color);
-			t.TournerDroit(roueDroite, roueGauche);
-			ar.Avancer(roueDroite, roueGauche, Dis);
-			f.Frapper(moteurFrappe);
-			ar.Reculer(roueDroite, roueGauche, Dis);
-			t.TournerGauche(roueDroite, roueGauche);
+			l.suivreLigne(roueDroite, roueGauche, color);
+			t.tournerDroit(roueDroite, roueGauche);
+			
+			if (ar.siObjet(Dis)){
+				ar.avancer(roueDroite, roueGauche, Dis);
+				f.frapper(moteurFrappe);
+				ar.reculer(roueDroite, roueGauche, Dis);
+			}
+			t.tournerGauche(roueDroite, roueGauche);
 		}
 	}
 

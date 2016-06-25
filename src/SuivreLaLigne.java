@@ -13,7 +13,7 @@ public class SuivreLaLigne {
 
 	}
 	
-	public void SuivreLigne(EV3LargeRegulatedMotor roueDroite, EV3LargeRegulatedMotor roueGauche,SampleProvider color){
+	public void suivreLigne(EV3LargeRegulatedMotor roueDroite, EV3LargeRegulatedMotor roueGauche,SampleProvider color){
 		
 		color.fetchSample(sample, 0);
 		Lumiere = sample[0];
